@@ -1,9 +1,26 @@
-import NextAuth from 'next-auth';
-import { authConfig } from './auth.config';
+// middleware.ts
+import { NextRequest, NextResponse } from 'next/server';
+import { withI18nMiddleware } from '@/src/middlewares/withI18nMiddleware';
+import { withAuthMiddleware } from '@/src/middlewares/withAuthMiddleware';
 
-export default NextAuth(authConfig).auth;
+export async function middleware(req: NextRequest) {
+    console.log('asd sad sad sad sad');
+    if (req.nextUrl.pathname === '/favicon.ico') {
+        return NextResponse.next(); // Skip middleware for favicon
+    }
+
+    // Run localization middleware first
+    let response: any = await withI18nMiddleware(req);
+    if (response) return response;
+
+    // Run NextAuth middleware next
+    response = await withAuthMiddleware(req);
+    if (response) return response;
+
+    // Continue to Next.js if no middleware returned a response
+    return NextResponse.next();
+}
 
 export const config = {
-    // https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
     matcher: ['/((?!api|_next/static|_next/image|.*\\.png$).*)'],
 };
