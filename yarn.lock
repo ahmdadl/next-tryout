@@ -174,6 +174,31 @@
     semver "^7.3.5"
     tar "^6.1.11"
 
+"@mongez/atom@^1.0.0":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@mongez/atom/-/atom-1.0.3.tgz#d32280dd05ad4de30ac5638678cb437fb0ffd82e"
+  integrity sha512-CEZqwmFq2g/vmEOwXA3JXX/JOJcXQMu/CqhZP9seBKRIi74AQ52VOzYdf7mbzt7YbVjvdDOk4Bt6K/fpvl8xNg==
+  dependencies:
+    "@mongez/events" "^2.1.0"
+    "@mongez/reinforcements" "^2.3.10"
+
+"@mongez/events@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@mongez/events/-/events-2.1.0.tgz#644fa0c0ae226f162ccca4a755a059892d545253"
+  integrity sha512-gUTDm8fy0BRJmG/kkSmLi/Ir2PAFQQtk0FE9GGivnIK5YpGJD6MFrIj3Ui8SN3mMFKvCJae6zJjuYv6fLFQgBQ==
+
+"@mongez/react-atom@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@mongez/react-atom/-/react-atom-5.0.0.tgz#13977bdab7ce2a865d3390c76cf3a87a4446b8e3"
+  integrity sha512-X64mk3x5uw9J6ev7Jls2Q+aS9o0v4tPUc6Oc7LcPeucgj4Da1zCVnT+l4DEK+x6c0s6QVWjYFAe+RWj528UXeg==
+  dependencies:
+    "@mongez/atom" "^1.0.0"
+
+"@mongez/reinforcements@^2.3.10":
+  version "2.3.10"
+  resolved "https://registry.yarnpkg.com/@mongez/reinforcements/-/reinforcements-2.3.10.tgz#cf47b3196cf5283ea7d4228652df6ee2e2cb2296"
+  integrity sha512-jGTDXo2AO+E0Xuy1iTmJHlz2W/dbxWBTuy/J1MRjKs140JNG3mDqM1Msv1a6aLCg7toHqiRusdI13JuMNqWtOw==
+
 "@neondatabase/serverless@^0.9.3":
   version "0.9.4"
   resolved "https://registry.yarnpkg.com/@neondatabase/serverless/-/serverless-0.9.4.tgz#dec4b0b8b03578c2454b5e3edbf99efc15823a3d"
@@ -4263,6 +4288,11 @@ use-sidecar@^1.1.2:
     detect-node-es "^1.1.0"
     tslib "^2.0.0"
 
+use-sync-external-store@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
+  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
+
 utf-8-validate@^6.0.4:
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/utf-8-validate/-/utf-8-validate-6.0.4.tgz#1305a1bfd94cecb5a866e6fc74fd07f3ed7292e5"
@@ -4431,3 +4461,10 @@ zod@^3.23.8:
   version "3.23.8"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.23.8.tgz#e37b957b5d52079769fb8097099b592f0ef4067d"
   integrity sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==
+
+zustand@^4.5.4:
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-4.5.4.tgz#63abdd81edfb190bc61e0bbae045cc4d52158a05"
+  integrity sha512-/BPMyLKJPtFEvVL0E9E9BTUM63MNyhPGlvxk1XjrfWTUlV+BR8jufjsovHzrtR6YNcBEcL7cMHovL1n9xHawEg==
+  dependencies:
+    use-sync-external-store "1.2.0"
