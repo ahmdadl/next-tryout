@@ -1,19 +1,16 @@
 import { paraglide } from '@inlang/paraglide-next/plugin';
-/** @type {import('next').NextConfig} */
+import createNextIntlPlugin from 'next-intl/plugin';
 
+const withNextIntl = createNextIntlPlugin();
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
     // i18n: {
-    //     locales: ['default', 'en', 'de', 'fr'],
+    //     locales: ['default', 'en', 'de', 'fr', 'ar'],
     //     defaultLocale: 'default',
     //     localeDetection: false,
     // },
-    // trailingSlash: false,
+    trailingSlash: false,
 };
 
-export default paraglide({
-    paraglide: {
-        project: './project.inlang',
-        outdir: './src/paraglide',
-    },
-    ...nextConfig,
-});
+export default withNextIntl(nextConfig);
