@@ -2,7 +2,6 @@ import { NextRequest } from 'next/server';
 import NextAuth from 'next-auth';
 import { authConfig } from '@/auth.config';
 import createNextIntlPlugin from 'next-intl/plugin';
-import { middleware as paraglide } from '@/src/lib/i18n';
 import createMiddleware from 'next-intl/middleware';
 import { locales } from '../i18n';
 

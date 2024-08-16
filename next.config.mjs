@@ -1,4 +1,3 @@
-import { paraglide } from '@inlang/paraglide-next/plugin';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
